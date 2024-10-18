@@ -1,0 +1,13 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "A basic webserver project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
