@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./html:/usr/share/nginx/html:ro
+    networks:
+      - mynetwork
+
+  webserver:
+    build:
+      context: ./webserver
+    ports:
+      - "8001:8001"
+      - "8002:8002"
+      - "8003:8003"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
